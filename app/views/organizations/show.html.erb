@@ -3,7 +3,7 @@
 </div>
 
 <h2>People</h2>
-
+<div class="well">
 <table>
   <thead>
     <tr>
@@ -13,9 +13,13 @@
     </tr>
   </thead>
   <tbody>
-    <div class="well">
-      Replace me with a list of person names that this organization
-      is connected to, via employments.
-    </div>
+    <% @organization.people.each do |person| %>
+    <tr>
+      <td>
+        <%= person.name %>
+      </td>
+      <% end %>
+    </tr>
   </tbody>
 </table>
+</div>
